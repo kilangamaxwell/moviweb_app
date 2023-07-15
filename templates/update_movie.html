@@ -14,7 +14,7 @@
         type="text"
         name="name"
         id="name"
-        value="{{ movie.name }}"
+        value="{{ movie.Title }}"
         required
       /><br />
 
@@ -23,7 +23,7 @@
         type="text"
         name="director"
         id="director"
-        value="{{ movie.director }}"
+        value="{{ movie.Director }}"
         required
       /><br />
 
@@ -32,7 +32,7 @@
         type="number"
         name="year"
         id="year"
-        value="{{ movie.year }}"
+        value="{{ movie.Year }}"
         min="1900"
         max="2099"
         required
@@ -43,7 +43,7 @@
         type="number"
         name="rating"
         id="rating"
-        value="{{ movie.rating }}"
+        value="{{ movie.imdbRating }}"
         step="0.1"
         min="0"
         max="10"

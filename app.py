@@ -1,5 +1,9 @@
 from flask import Flask, jsonify, render_template, request, url_for, redirect
 from data_manager.json_data_manager import JSONDataManager
+import requests
+
+API_KEY = "d4ba49c2"
+URL = f"http://www.omdbapi.com/?apikey={API_KEY}&t="
 
 app = Flask(__name__)
 data_manager = JSONDataManager('users.json')
@@ -57,7 +61,9 @@ def update_movie(user_id, movie_id):
     if user:
         movies = data_manager.get_user_movies(user_id)
         if str(movie_id) in movies:
-            movie = movies[str(movie_id)]
+            db_movie = movies[str(movie_id)]
+            title = db_movie["name"]
+            movie = find_movie_in_api(title)
             if request.method == 'POST':
                 name = request.form['name']
                 director = request.form['director']
@@ -85,6 +91,32 @@ def delete_movie(user_id, movie_id):
             data_manager.delete_user_movie(user_id, movie_id)
         return redirect(url_for('user_movies', user_id=user_id))
     return "User or movie not found"
+
+
+def find_movie_in_api(title):
+    """Retrieve movie info from the OMDB API.
+
+    Args:
+        title (str): The title of the movie to search for.
+
+    Returns:
+        dict: The movie data retrieved from the API as a dictionary.
+    """
+    response = requests.get(URL+title)
+    try:
+        response = requests.get(URL+title)
+        response.raise_for_status()  # Raises an HTTPError for 4xx and 5xx status codes
+    except requests.exceptions.HTTPError as errh:
+        print("HTTP Error:", errh)
+    except requests.exceptions.ConnectionError as errc:
+        print("Error Connecting:", errc)
+    except requests.exceptions.Timeout as errt:
+        print("Timeout Error:", errt)
+    except requests.exceptions.RequestException as err:
+        print("Something went wrong:", err)
+    if response.status_code == requests.codes.ok:
+        data = response.json()
+    return data
 
 
 if __name__ == '__main__':
