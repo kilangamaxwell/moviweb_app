@@ -154,3 +154,13 @@ class CSVDataManager(DataManagerInterface):
     def get_user_by_id(self, user_id):
         users = self.get_all_users()
         return users.get(user_id)
+
+    def add_user(self, name):
+        users = self.get_all_users()
+        user_id = max(users.keys(), default=0) + 1
+        users[user_id] = {
+            "name": name,
+            "movies": {}
+        }
+        self.save_db(users)
+        return True

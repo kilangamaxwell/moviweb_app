@@ -1,4 +1,4 @@
-from data_manager_interface import DataManagerInterface
+from data_manager.data_manager_interface import DataManagerInterface
 import json
 
 
@@ -24,7 +24,8 @@ class JSONDataManager(DataManagerInterface):
         user = users.get(str(user_id), {})
         movies = user.get("movies", {})
 
-        movie_id = max(movies.keys(), default=0) + 1
+        movie_id = max(
+            map(lambda item: (int(item[0])), movies.keys()), default=0) + 1
         movie = {
             'name': name,
             'director': director,
@@ -121,3 +122,13 @@ class JSONDataManager(DataManagerInterface):
     def get_user_by_id(self, user_id):
         users = self.get_all_users()
         return users.get(str(user_id))
+
+    def add_user(self, name):
+        users = self.get_all_users()
+        user_id = max(map(lambda item: int(item), users.keys()), default=0) + 1
+        users[str(user_id)] = {
+            "name": name,
+            "movies": {}
+        }
+        self.save_db(users)
+        return True
