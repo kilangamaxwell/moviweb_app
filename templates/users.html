@@ -2,13 +2,24 @@
 <html>
   <head>
     <title>Users - MovieWeb App</title>
+    <link rel="stylesheet" href="\static\styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
-    <h1>Users</h1>
-    <ul>
-      {% for user_id, user_data in users.items() %}
-      <li><a href="/users/{{ user_id }}">{{ user_data.name }}</a></li>
-      {% endfor %}
-    </ul>
+    <div class="list-movies-title">
+      <a href="/" class="home-link"><i class="fas fa-home"></i></a>
+      <h1>Users</h1>
+      <a href="/add_user" class="btn-users">Add User</a>
+    </div>
+    <div class="users-body">
+      <ul class="list-users">
+        {% for user_id, user_data in users.items() %}
+        <li><a href="/users/{{ user_id }}">{{ user_data.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </body>
 </html>

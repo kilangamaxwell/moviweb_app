@@ -6,13 +6,22 @@
                 "name": "Deadpool",
                 "director": "Tim Miller",
                 "year": 2016,
-                "rating": 8.0
+                "rating": 8.0,
+                "poster": "https://m.media-amazon.com/images/M/MV5BYzE5MjY1ZDgtMTkyNC00MTMyLThhMjAtZGI5OTE1NzFlZGJjXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
             },
             "2": {
                 "name": "The Matrix",
                 "director": "Lana Wachowski, Lilly Wachowski",
                 "year": 1999,
-                "rating": 8.7
+                "rating": 8.7,
+                "poster": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            },
+            "3": {
+                "name": "Psycho",
+                "director": "Alfred Hitchcock",
+                "year": 1960,
+                "rating": 8.5,
+                "poster": "https://m.media-amazon.com/images/M/MV5BNTQwNDM1YzItNDAxZC00NWY2LTk0M2UtNDIwNWI5OGUyNWUxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
             }
         }
     },
@@ -20,16 +29,25 @@
         "name": "Alice",
         "movies": {
             "1": {
-                "name": "Seven",
-                "director": "David Fincher",
-                "year": 1995,
-                "rating": 8.6
+                "name": "Seven Samurai",
+                "director": "Akira Kurosawa",
+                "year": 1954,
+                "rating": 8.6,
+                "poster": "https://m.media-amazon.com/images/M/MV5BNWQ3OTM4ZGItMWEwZi00MjI5LWI3YzgtNTYwNWRkNmIzMGI5XkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_SX300.jpg"
             },
             "2": {
                 "name": "The Silence of the Lambs",
                 "director": "Jonathan Demme",
                 "year": 1991,
-                "rating": 8.6
+                "rating": 8.6,
+                "poster": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            },
+            "3": {
+                "name": "Inglorious Basterds: Stolz der Nation",
+                "director": "Eli Roth",
+                "year": 2009,
+                "rating": 7.1,
+                "poster": "https://m.media-amazon.com/images/M/MV5BMDIxYTZmNjQtMmMxYi00MDkyLWJjZDYtYTM1NTA3ZWY2MTUwXkEyXkFqcGdeQXVyMjA3NDg2Mzg@._V1_SX300.jpg"
             }
         }
     },
@@ -40,13 +58,22 @@
                 "name": "Inception",
                 "director": "Christopher Nolan",
                 "year": 2010,
-                "rating": 8.8
+                "rating": 8.8,
+                "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
             },
             "2": {
                 "name": "Spider-Man: Across the Spider-Verse",
                 "director": "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
                 "year": 2023,
-                "rating": 8.9
+                "rating": 8.9,
+                "poster": "https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg"
+            },
+            "3": {
+                "name": "Underworld",
+                "director": "Len Wiseman",
+                "year": 2003,
+                "rating": 7.0,
+                "poster": "https://m.media-amazon.com/images/M/MV5BMTk1OTc2ZmUtODU0Yy00NGJiLWJmNmQtODI0MzBjODk3MjI4L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
             }
         }
     },
@@ -55,15 +82,24 @@
         "movies": {
             "1": {
                 "name": "City of God",
-                "director": "Fernando Meirelles, Katia Lund",
+                "director": "Fernando Meirelles, K\u00e1tia Lund",
                 "year": 2002,
-                "rating": 8.6
+                "rating": 8.6,
+                "poster": "https://m.media-amazon.com/images/M/MV5BOTMwYjc5ZmItYTFjZC00ZGQ3LTlkNTMtMjZiNTZlMWQzNzI5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
             },
             "2": {
                 "name": "The Pianist",
                 "director": "Roman Polanski",
                 "year": 2002,
-                "rating": 8.5
+                "rating": 8.5,
+                "poster": "https://m.media-amazon.com/images/M/MV5BOWRiZDIxZjktMTA1NC00MDQ2LWEzMjUtMTliZmY3NjQ3ODJiXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+            },
+            "3": {
+                "name": "Apocalypse Now",
+                "director": "Francis Ford Coppola",
+                "year": 1979,
+                "rating": 8.4,
+                "poster": "https://m.media-amazon.com/images/M/MV5BYmQyNTA1ZGItNjZjMi00NzFlLWEzMWEtNWMwN2Q2MjJhYzEyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
             }
         }
     }

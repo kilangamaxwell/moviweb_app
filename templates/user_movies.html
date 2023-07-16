@@ -2,25 +2,39 @@
 <html>
   <head>
     <title>User Movies - MovieWeb App</title>
+    <link rel="stylesheet" href="\static\styles.css" />
   </head>
   <body>
-    <h1>User Movies</h1>
-    <h2>{{ user.name }}'s Favorite Movies</h2>
-    <ul>
-      {% for movie_id, movie_data in movies.items() %}
-      <li>
-        <strong>{{ movie_data.name }}</strong>
-        <ul>
-          <li>Director: {{ movie_data.director }}</li>
-          <li>Year: {{ movie_data.year }}</li>
-          <li>Rating: {{ movie_data.rating }}</li>
-        </ul>
-        <a href="/users/{{ user_id }}/update_movie/{{ movie_id }}">Edit</a>
-        <a href="/users/{{ user_id }}/delete_movie/{{ movie_id }}">Delete</a>
-      </li>
-      {% endfor %}
-    </ul>
-    <a href="/users">Back to Users</a>
-    <a href="/users/{{ user_id }}/add_movie">Add Movie</a>
+    <div class="list-movies-title">
+      <a href="/users" class="btn-back">Back to Users</a>
+      <h1>User Movies</h1>
+      <a href="/users/{{ user_id }}/add_movie" class="btn-users">Add Movie</a>
+    </div>
+    <div>
+      <h2 class="sub-heading">{{ user.name }}'s Favorite Movies</h2>
+      <ul class="movie-grid">
+        {% for movie_id, movie_data in movies.items() %}
+        <li class="movie">
+          <img class="movie-poster" src="{{movie_data.poster}}" title="" />
+          <div class="movie-title"><strong>{{ movie_data.name }}</strong></div>
+          <div class="movie-year">Director: {{ movie_data.director }}</div>
+          <div class="movie-year">Year: {{ movie_data.year }}</div>
+          <div class="movie-rating">Rating: {{ movie_data.rating }}</div>
+          <div class="button-container">
+            <a
+              class="btn-edit"
+              href="/users/{{ user_id }}/update_movie/{{ movie_id }}"
+              >Edit</a
+            >
+            <a
+              class="btn-del"
+              href="/users/{{ user_id }}/delete_movie/{{ movie_id }}"
+              >Delete</a
+            >
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </body>
 </html>
