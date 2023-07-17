@@ -43,18 +43,13 @@ The MovieWeb App is a Flask-based web application that allows users to manage th
    pip install -r requirements.txt
    ```
 
-6. Set up the database:
-
-   - Make sure you have SQLite installed on your system.
-   - Create a new SQLite database file named `database.db`.
-
-7. Run the application:
+6. Run the application:
 
    ```
    python app.py
    ```
 
-8. Open your web browser and navigate to `http://localhost:5000` to access the MovieWeb App.
+7. Open your web browser and navigate to `http://localhost:5000` to access the MovieWeb App.
 
 ## Usage
 
