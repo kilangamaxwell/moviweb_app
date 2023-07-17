@@ -19,7 +19,7 @@ def home():
     """
     # Create the movie_list
     movie_list = data_manager.create_movie_list()
-    return render_template('movie_list.html', movies=movie_list)
+    return render_template('home.html', movies=movie_list)
 
 
 @app.route('/users')

@@ -11,7 +11,9 @@
       <a href="/users/{{ user_id }}/add_movie" class="btn-users">Add Movie</a>
     </div>
     <div>
-      <h2 class="sub-heading">{{ user.name }}'s Favorite Movies</h2>
+      <div class="list-movies-title">
+        <h2 class="sub-heading">{{ user.name }}'s Favorite Movies</h2>
+      </div>
       <ul class="movie-grid">
         {% for movie_id, movie_data in movies.items() %}
         <li class="movie">
